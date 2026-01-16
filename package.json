@@ -1,0 +1,103 @@
+{
+  "name": "@uni-helper/mcp",
+  "type": "module",
+  "version": "0.0.1",
+  "packageManager": "pnpm@10.6.2",
+  "description": "mcp - uniapp也得有ai开发体验",
+  "author": "FliPPeDround <flippedround@qq.com>",
+  "license": "MIT",
+  "funding": "https://afdian.com/a/flippedround",
+  "homepage": "https://github.com/uni-helper/mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uni-helper/mcp.git"
+  },
+  "bugs": "https://github.com/uni-helper/mcp/issues",
+  "keywords": [
+    "uni",
+    "uni-app",
+    "uni-helper",
+    "mcp",
+    "miniapp"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist",
+    "vectorStore"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch ./src",
+    "lint": "eslint",
+    "task": "tsx ./tasks/uniappDocs/index.ts",
+    "play": "cd playground && pnpm dev",
+    "lint:fix": "eslint --fix",
+    "inspect": "mcp-inspector",
+    "prepublishOnly": "pnpm build",
+    "release": "bumpp",
+    "test": "vitest",
+    "prepare": "simple-git-hooks",
+    "postinstall": "node scripts/download-model.cjs"
+  },
+  "peerDependencies": {
+    "uniapp": "*",
+    "vite": ">=3.1.0"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.9",
+    "@huggingface/transformers": "^3.8.1",
+    "@langchain/community": "^1.1.4",
+    "@modelcontextprotocol/sdk": "^1.25.2",
+    "consola": "^3.2.3",
+    "fs-extra": "^11.3.3",
+    "hnswlib-node": "^3.0.0",
+    "hono": "^4.11.4",
+    "langchain": "^1.2.8",
+    "local-pkg": "^1.1.2",
+    "open": "^11.0.0",
+    "pathe": "^2.0.3",
+    "zod": "^4.3.5"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^7.0.1",
+    "@antfu/utils": "^9.3.0",
+    "@langchain/core": "^1.1.15",
+    "@langchain/ollama": "^1.2.0",
+    "@langchain/textsplitters": "^1.0.1",
+    "@modelcontextprotocol/inspector": "^0.18.0",
+    "@types/debug": "^4.1.12",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^25.0.8",
+    "@types/turndown": "^5.0.6",
+    "ansis": "^4.2.0",
+    "bumpp": "^10.4.0",
+    "cheerio": "^1.1.2",
+    "debug": "^4.4.3",
+    "eslint": "^9.39.2",
+    "lint-staged": "^16.2.7",
+    "simple-git-hooks": "^2.13.1",
+    "tinyexec": "^1.0.2",
+    "tsdown": "^0.20.0-beta.3",
+    "tsx": "^4.21.0",
+    "turndown": "^7.2.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vitest": "^4.0.17",
+    "vitest-package-exports": "^1.1.2"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm i --frozen-lockfile --ignore-scripts --offline && npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}

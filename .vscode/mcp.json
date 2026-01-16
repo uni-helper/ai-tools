@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "github-mcp": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp"
+    },
+    "uni": {
+      "type": "http",
+      "url": "http://localhost:2515/mcp"
+    }
+  }
+}
