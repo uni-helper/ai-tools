@@ -7,5 +7,4 @@ export default defineConfig({
   dts: true,
   fixedExtension: true,
   clean: true,
-  external: ['hnswlib-node'],
 })

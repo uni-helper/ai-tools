@@ -1,10 +1,11 @@
-const process = require('node:process')
-const { env } = require('@huggingface/transformers')
-const { HuggingFaceTransformersEmbeddings } = require('@langchain/community/embeddings/huggingface_transformers')
+import process from 'node:process'
+import { env } from '@huggingface/transformers'
+import { HuggingFaceTransformersEmbeddings } from '@langchain/community/embeddings/huggingface_transformers'
 
 async function downloadModel() {
-  env.remoteHost = 'https://hf-mirror.com'
-
+  env.version = 'master'
+  env.remoteHost = 'https://www.modelscope.cn/models'
+  await new Promise(resolve => setTimeout(resolve, 1000))
   const embeddings = new HuggingFaceTransformersEmbeddings({
     model: 'onnx-community/Qwen3-Embedding-0.6B-ONNX',
     pretrainedOptions: {

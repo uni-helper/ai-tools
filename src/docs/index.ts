@@ -14,7 +14,9 @@ export async function loadVectorStore(vectorName: VectorStoreName, _embeddings?:
     uniapp: join(__dirname, '../', 'vectorStore', 'uniapp'),
   }
 
-  env.remoteHost = 'https://hf-mirror.com' // 配置 Hugging Face 镜像
+  // 配置 ModelScope 镜像
+  env.version = 'master'
+  env.remoteHost = 'https://www.modelscope.cn/models'
   const embeddings = _embeddings ?? new HuggingFaceTransformersEmbeddings({
     model: 'onnx-community/Qwen3-Embedding-0.6B-ONNX',
     pretrainedOptions: {

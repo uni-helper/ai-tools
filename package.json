@@ -47,7 +47,7 @@
     "release": "bumpp",
     "test": "vitest",
     "prepare": "simple-git-hooks",
-    "postinstall": "node scripts/download-model.cjs"
+    "postinstall": "node scripts/download-model.mjs"
   },
   "peerDependencies": {
     "uniapp": "*",
@@ -59,11 +59,13 @@
     "@langchain/community": "^1.1.4",
     "@modelcontextprotocol/sdk": "^1.25.2",
     "consola": "^3.2.3",
+    "fkill": "^10.0.3",
     "fs-extra": "^11.3.3",
     "hnswlib-node": "^3.0.0",
     "hono": "^4.11.4",
     "langchain": "^1.2.8",
     "local-pkg": "^1.1.2",
+    "minimist": "^1.2.8",
     "open": "^11.0.0",
     "pathe": "^2.0.3",
     "zod": "^4.3.5"
@@ -77,6 +79,7 @@
     "@modelcontextprotocol/inspector": "^0.18.0",
     "@types/debug": "^4.1.12",
     "@types/fs-extra": "^11.0.4",
+    "@types/minimist": "^1.2.5",
     "@types/node": "^25.0.8",
     "@types/turndown": "^5.0.6",
     "ansis": "^4.2.0",
