@@ -2,7 +2,7 @@
 
 缓慢随缘更新中，欢迎贡献你的 uniapp 最佳实践来完善 [skills](./src/skills/uniapp)。
 
-> 仅使用mcp可以安装下面文档使用。支持查询uniapp文档 `MCP + RAG`
+> 仅使用 MCP 即可按下方文档安装。使用 `MCP + RAG` 方案来查询 uniapp 文档。
 <details>
 <summary>点击查看安装和配置</summary>
 
