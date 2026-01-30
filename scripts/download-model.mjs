@@ -2,6 +2,10 @@ import process from 'node:process'
 import { env } from '@huggingface/transformers'
 import { HuggingFaceTransformersEmbeddings } from '@langchain/community/embeddings/huggingface_transformers'
 
+if (process.env.CI) {
+  process.exit(0)
+}
+
 async function downloadModel() {
   env.version = 'master'
   env.remoteHost = 'https://www.modelscope.cn/models'

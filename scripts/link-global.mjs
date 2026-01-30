@@ -23,6 +23,7 @@ async function linkGlobal() {
       stdio: 'inherit',
       shell: true,
     })
+    console.log('✅ uni-mcp 已成功链接到全局')
   }
   catch (err) {
     console.error('❌ 全局链接失败:', err.message)
