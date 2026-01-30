@@ -14,8 +14,8 @@ pnpm add @uni-helper/mcp -D
 ```json
 {
   "mcpServers": {
-    "uni-docs": {
-      "url": "http://localhost:2515/mcp"
+    "uni-doc": {
+      "command": "uni-mcp"
     }
   }
 }
