@@ -42,7 +42,7 @@
     "build": "tsdown",
     "dev": "tsdown --watch ./src",
     "lint": "eslint",
-    "task": "tsx ./tasks/uniappDocs/index.ts",
+    "task": "node ./tasks/uniappDocs/index.ts",
     "play": "cd playground && pnpm dev",
     "lint:fix": "eslint --fix",
     "inspect": "mcp-inspector",
@@ -50,7 +50,7 @@
     "release": "bumpp",
     "pull:repo": "node scripts/cli.ts",
     "test": "vitest",
-    "prepare": "simple-git-hooks && git submodule update --init --recursive",
+    "prepare": "simple-git-hooks",
     "postinstall": "node scripts/download-model.mjs"
   },
   "peerDependencies": {

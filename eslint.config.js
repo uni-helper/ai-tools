@@ -3,12 +3,9 @@ import antfu from '@antfu/eslint-config'
 export default antfu(
   {
     type: 'lib',
-    pnpm: true,
+    pnpm: false,
     ignores: [
       'playground',
-      '**/vendor/**',
-      '**/sources/**',
-      '**/skills/**',
       '**/vectorStore/**',
     ],
     rules: {
